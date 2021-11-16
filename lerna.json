@@ -1,4 +1,9 @@
 {
+  "command": {
+    "version": {
+      "message": "chore: update all package info"
+    }
+  },
   "packages": [
     "packages/*"
   ],
