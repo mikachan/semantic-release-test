@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cz": "npx cz",
-    "update-packages": "npx lerna version --conventional-commits --no-commit-hooks --yes",
+    "update-packages": "npx lerna version --conventional-commits --no-commit-hooks --yes --amend",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
