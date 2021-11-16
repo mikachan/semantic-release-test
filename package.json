@@ -4,7 +4,7 @@
   "description": "Test changelog automation of multiple packages.",
   "main": "index.js",
   "scripts": {
-    "commit": "npx git-cz",
+    "cz": "npx cz",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,12 +23,17 @@
   "devDependencies": {
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
+    "cz-conventional-changelog": "^3.3.0",
     "husky": "^7.0.4"
   },
   "husky": {
     "hooks": {
-			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
-  }  
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
