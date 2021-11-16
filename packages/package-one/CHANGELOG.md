@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2021-11-16)
+
+
+### Features
+
+* update package three readme with important content ([#6](https://github.com/mikachan/semantic-release-test/issues/6)) ([3f61f08](https://github.com/mikachan/semantic-release-test/commit/3f61f08b2e150cc7b3ba92019b10f266116c5deb))
+
+
+
+
+
 ## 1.1.2 (2021-11-16)
 
 **Note:** Version bump only for package package-one
