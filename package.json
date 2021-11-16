@@ -1,0 +1,34 @@
+{
+  "name": "semantic-release-test",
+  "version": "1.0.0",
+  "description": "Test changelog automation of multiple packages.",
+  "main": "index.js",
+  "scripts": {
+    "commit": "npx git-cz",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikachan/semantic-release-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikachan/semantic-release-test/issues"
+  },
+  "homepage": "https://github.com/mikachan/semantic-release-test#readme",
+  "dependencies": {
+    "lerna": "^4.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "husky": "^7.0.4"
+  },
+  "husky": {
+    "hooks": {
+			"commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  }  
+}
