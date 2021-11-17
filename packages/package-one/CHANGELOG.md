@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/mikachan/semantic-release-test/compare/package-one@1.2.6...package-one@1.3.0) (2021-11-17)
+
+
+### Features
+
+* remove section from package one readme ([#13](https://github.com/mikachan/semantic-release-test/issues/13)) ([ae8a790](https://github.com/mikachan/semantic-release-test/commit/ae8a79058e43949f0ad6e3cb20b9244fe11d9732))
+
+
+
+
+
 ## 1.2.6 (2021-11-17)
 
 **Note:** Version bump only for package package-one
