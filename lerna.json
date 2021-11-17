@@ -1,7 +1,8 @@
 {
   "command": {
     "version": {
-      "message": "chore: update all package info"
+      "allowBranch": "main",
+      "message": "chore: auto-update package info"
     }
   },
   "packages": [
