@@ -16,6 +16,6 @@ jobs:
           node-version: 12
       
       - run: git config --global user.email octobot@github.com
-      - run: git config --global user.name GitHub Actions
+      - run: git config --global user.name "GitHub Actions"
       - run: npm ci
       - run: npm run update-packages
