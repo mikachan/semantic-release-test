@@ -4,7 +4,7 @@
   "description": "Test changelog automation of multiple packages.",
   "main": "index.js",
   "scripts": {
-    "cz": "npx cz",
+    "commit": "npx cz",
     "update-packages": "npx lerna version --conventional-commits --no-commit-hooks --yes",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
