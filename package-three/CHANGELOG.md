@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/mikachan/semantic-release-test/compare/package-three@1.2.7...package-three@2.0.0) (2021-11-24)
+
+
+### Features
+
+* add index.js to package three ([#15](https://github.com/mikachan/semantic-release-test/issues/15)) ([7491289](https://github.com/mikachan/semantic-release-test/commit/7491289efb98f8f6cfa9ea917cffdec8d8a5b820))
+
+
+### BREAKING CHANGES
+
+* This is a breaking change.
+
+
+
+
+
 ## [1.2.7](https://github.com/mikachan/semantic-release-test/compare/package-three@1.2.6...package-three@1.2.7) (2021-11-24)
 
 **Note:** Version bump only for package package-three
