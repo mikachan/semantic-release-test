@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.3.1](https://github.com/mikachan/semantic-release-test/compare/package-one@1.3.0...package-one@1.3.1) (2021-11-24)
+
+**Note:** Version bump only for package package-one
+
+
+
+
+
 # [1.3.0](https://github.com/mikachan/semantic-release-test/compare/package-one@1.2.6...package-one@1.3.0) (2021-11-17)
 
 
