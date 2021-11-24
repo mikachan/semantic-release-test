@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/mikachan/semantic-release-test/compare/package-one@1.3.2...package-one@2.0.0) (2021-11-24)
+
+
+### Features
+
+* add index.js to package one ([e0d1c64](https://github.com/mikachan/semantic-release-test/commit/e0d1c64bb0ff0622f1b5bd6d207e50436e3375bf)), closes [#14](https://github.com/mikachan/semantic-release-test/issues/14)
+
+
+### BREAKING CHANGES
+
+* Now need to include index.js, similar to package two
+
+
+
+
+
 ## [1.3.2](https://github.com/mikachan/semantic-release-test/compare/package-one@1.3.1...package-one@1.3.2) (2021-11-24)
 
 **Note:** Version bump only for package package-one
