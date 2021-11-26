@@ -12,21 +12,27 @@ jobs:
     name: Update All Packages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           # pulls all commits (needed for lerna to correctly version)
           fetch-depth: "0"
           all_commits: true
           all_tags: true
-
-      - uses: actions/setup-node@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
           node-version: 12
-      
-      - run: git config --global user.email 41898282+github-actions[bot]@users.noreply.github.com
-      - run: git config --global user.name "github-actions[bot]"
-      - run: npm ci
-      - run: npm run update-packages
-      - run: git add . 
-      - run: git commit -m "chore:"" auto-update package info"
-      - run: git push
+      - name: Git Identity
+        run: |
+          git config --global user.name '${GITHUB_ACTOR}'
+          git config --global user.email '${GITHUB_ACTOR}@users.noreply.github.com'
+      - name: Update Packages
+        run: |
+          npm ci
+          npm run update-packages
+      - name: Commit Changes
+        run: |
+          git add . 
+          git commit -m "chore:"" auto-update package info"
+          git push
