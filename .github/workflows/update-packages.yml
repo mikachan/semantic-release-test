@@ -30,9 +30,10 @@ jobs:
       - name: Update Packages
         run: |
           npm ci
-          npm run update-packages
-      - name: Commit Changes
+          npm run update-versions
+          npm run update-stylecss
+      - name: Commit style.css Changes
         run: |
           git add . 
-          git commit -m "chore:"" auto-update package info"
+          git commit -m "chore:"" auto-update style.css files"
           git push
