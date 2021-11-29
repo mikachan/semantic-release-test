@@ -6,7 +6,7 @@ const isWin = process.platform === 'win32';
 
 (async function start() {
 	let args = process.argv.slice(2);
-	let command = args?.[0];
+	let command = args[0];
 	switch (command) {
 		case "version-bump-stylecss": return versionBumpStyleCss();
 	}
