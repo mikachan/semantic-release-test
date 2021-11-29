@@ -7,5 +7,3 @@ Test content. Test test test.
 Here's some content.
 
 ## Heading Three
-
-A third section of content.
