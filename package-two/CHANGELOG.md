@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.1.0](https://github.com/mikachan/semantic-release-test/compare/package-two@5.0.1...package-two@5.1.0) (2021-11-29)
+
+
+### Features
+
+* add update-stylecss script ([a33c271](https://github.com/mikachan/semantic-release-test/commit/a33c271bd0b595bf04d6ddb0a235a36fd5e6d6b2))
+* tweak package two index ([20abe4b](https://github.com/mikachan/semantic-release-test/commit/20abe4b76cb7544f3d77771046547c1ae7499e7b))
+
+
+
+
+
 ## [5.0.1](https://github.com/mikachan/semantic-release-test/compare/package-two@5.0.0...package-two@5.0.1) (2021-11-29)
 
 **Note:** Version bump only for package package-two
