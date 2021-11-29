@@ -1,14 +1,14 @@
 name: "Update Packages"
 
 on:
-  pull_request_review:
-    types: [submitted]
+  pull_request:
+    types: [ closed ]
     branches:
       - main
 
 jobs:
   main:
-    #if: github.event.review.state == 'approved'
+    if: github.event.pull_request.merged == true
     name: Update All Packages
     runs-on: ubuntu-latest
     steps:
