@@ -8,4 +8,4 @@ Here's some content.
 
 ## Heading Three
 
-A third section of content. Blah blah.
+A third section of content.
