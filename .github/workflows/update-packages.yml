@@ -8,7 +8,7 @@ on:
 
 jobs:
   main:
-    if: github.event.review.state == 'approved'
+    #if: github.event.review.state == 'approved'
     name: Update All Packages
     runs-on: ubuntu-latest
     steps:
