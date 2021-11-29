@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "commit": "npx cz",
-    "update-packages": "npx lerna version --conventional-commits --no-commit-hooks --no-push --yes",
+    "update-stylecss": "npx lerna exec --since -- node \\$LERNA_ROOT_PATH/utils.mjs version-bump-stylecss",
+    "update-versions": "npx lerna version --conventional-commits --no-commit-hooks --no-push --yes",
+    "update-packages": "npm run update-versions && npm run update-stylecss",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -25,7 +27,9 @@
     "@commitlint/cli": "^14.1.0",
     "@commitlint/config-conventional": "^14.1.0",
     "cz-conventional-changelog": "^3.3.0",
-    "husky": "^7.0.4"
+    "fs": "0.0.1-security",
+    "husky": "^7.0.4",
+    "replace-in-file": "^6.3.2"
   },
   "husky": {
     "hooks": {
