@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "commit": "npx cz",
-    "update-stylecss": "npx lerna exec --since main node \\$LERNA_ROOT_PATH/utils.mjs version-bump-stylecss",
+    "update-stylecss": "npx lerna exec node \\$LERNA_ROOT_PATH/utils.mjs version-bump-stylecss",
     "update-versions": "npx lerna version --conventional-commits --no-commit-hooks --no-push --yes",
     "update-packages": "npm run update-versions && npm run update-stylecss",
     "test": "echo \"Error: no test specified\" && exit 1"
