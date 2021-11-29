@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [5.0.1](https://github.com/mikachan/semantic-release-test/compare/package-two@5.0.0...package-two@5.0.1) (2021-11-29)
+
+**Note:** Version bump only for package package-two
+
+
+
+
+
 # [5.0.0](https://github.com/mikachan/semantic-release-test/compare/package-two@2.0.1...package-two@5.0.0) (2021-11-29)
 
 
