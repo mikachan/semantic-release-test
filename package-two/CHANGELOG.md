@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/mikachan/semantic-release-test/compare/package-two@2.0.1...package-two@5.0.0) (2021-11-29)
+
+
+### chore
+
+* change that edits multiple packages ([#23](https://github.com/mikachan/semantic-release-test/issues/23)) ([2b734ef](https://github.com/mikachan/semantic-release-test/commit/2b734ef72f0d90658deca759d19322c4eacdffd2))
+
+
+### Features
+
+* update package two index ([fb618af](https://github.com/mikachan/semantic-release-test/commit/fb618afc39898311960e91749e11017f70cac114))
+
+
+### BREAKING CHANGES
+
+* This isn't really a breaking change.
+
+
+
+
+
 # [4.0.0](https://github.com/mikachan/semantic-release-test/compare/package-two@2.0.1...package-two@4.0.0) (2021-11-29)
 
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0](https://github.com/mikachan/semantic-release-test/compare/package-one@2.0.1...package-one@5.0.0) (2021-11-29)
+
+
+### chore
+
+* change that edits multiple packages ([#23](https://github.com/mikachan/semantic-release-test/issues/23)) ([2b734ef](https://github.com/mikachan/semantic-release-test/commit/2b734ef72f0d90658deca759d19322c4eacdffd2))
+
+
+### BREAKING CHANGES
+
+* This isn't really a breaking change.
+
+
+
+
+
 # [4.0.0](https://github.com/mikachan/semantic-release-test/compare/package-one@2.0.1...package-one@4.0.0) (2021-11-29)
 
 
