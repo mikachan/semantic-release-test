@@ -2,7 +2,7 @@
   "command": {
     "version": {
       "conventionalCommits": true,
-      "message": "chore: auto-update package info"
+      "message": "chore: update versions & changelogs"
     }
   },
   "packages": [
