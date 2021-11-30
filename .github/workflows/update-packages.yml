@@ -35,5 +35,5 @@ jobs:
         run: |
           npm run update-stylecss
           git add . 
-          git commit --amend
+          git commit --amend -m "chore:"" update versions & changelogs"
           git push
