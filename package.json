@@ -4,7 +4,6 @@
   "description": "Test changelog automation of multiple packages.",
   "main": "index.js",
   "scripts": {
-    "commit": "npx cz",
     "update-stylecss": "npx lerna exec node \\$LERNA_ROOT_PATH/utils.mjs version-bump-stylecss",
     "update-versions": "npx lerna version --conventional-commits --no-commit-hooks --no-push --yes",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,21 +22,8 @@
     "lerna": "^4.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^14.1.0",
-    "@commitlint/config-conventional": "^14.1.0",
-    "cz-conventional-changelog": "^3.3.0",
     "fs": "0.0.1-security",
     "husky": "^7.0.4",
     "replace-in-file": "^6.3.2"
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }

@@ -5,8 +5,7 @@
       "message": "chore: update versions & changelogs"
     }
   },
-  "packages": [
-    "**/*"
-  ],
+  "packages": ["**/*"],
+  "ignoreChanges": ["**/style.css", "**/style-child-theme.css"],
   "version": "independent"
 }
