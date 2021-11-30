@@ -35,5 +35,5 @@ jobs:
         run: |
           npm run update-stylecss
           git add . 
-          git commit -m "chore:"" auto-update style.css files"
+          git commit --amend
           git push
