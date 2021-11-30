@@ -8,4 +8,4 @@ Here's some content.
 
 ## Heading Three
 
-More content.
+Content.
