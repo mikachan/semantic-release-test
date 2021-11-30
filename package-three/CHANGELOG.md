@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.2.0](https://github.com/mikachan/semantic-release-test/compare/package-three@2.1.0...package-three@2.2.0) (2021-11-30)
+
+
+### Features
+
+* package three misc updates ([#38](https://github.com/mikachan/semantic-release-test/issues/38)) ([e72462f](https://github.com/mikachan/semantic-release-test/commit/e72462f3b198992bfd89dc497d956ad67045f310))
+* test non conventional commits ([#37](https://github.com/mikachan/semantic-release-test/issues/37)) ([15cfb33](https://github.com/mikachan/semantic-release-test/commit/15cfb3374efd389ed1faf367d5c30cd9a7f17bc5))
+
+
+
+
+
 ## [2.1.9](https://github.com/mikachan/semantic-release-test/compare/package-three@2.1.7...package-three@2.1.9) (2021-11-30)
 
 **Note:** Version bump only for package package-three
