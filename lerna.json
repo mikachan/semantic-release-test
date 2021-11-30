@@ -2,6 +2,7 @@
   "command": {
     "version": {
       "conventionalCommits": true,
+      "ignore": ["**/style.css"],
       "message": "chore: update versions & changelogs"
     }
   },
