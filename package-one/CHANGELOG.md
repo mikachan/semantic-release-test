@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.3.0](https://github.com/mikachan/semantic-release-test/compare/package-one@5.1.0...package-one@5.3.0) (2021-11-30)
+
+
+### Features
+
+* test non conventional commits ([#37](https://github.com/mikachan/semantic-release-test/issues/37)) ([15cfb33](https://github.com/mikachan/semantic-release-test/commit/15cfb3374efd389ed1faf367d5c30cd9a7f17bc5))
+
+
+
+
+
 # [5.2.0](https://github.com/mikachan/semantic-release-test/compare/package-one@5.1.0...package-one@5.2.0) (2021-11-30)
 
 
