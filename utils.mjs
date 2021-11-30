@@ -17,7 +17,8 @@ import replace from 'replace-in-file';
  Used by Lerna via update-stylecss command
 */
 async function versionBumpStyleCss() {
-	const { version } = require('./package.json');
+	let packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf8'));
+	let newVersion = packageJson.version;
 	let styleCss = fs.existsSync('./style.css') ? './style.css' : '';
 	let styleChildThemeCss = fs.existsSync('./style-child-theme.css') ? './style-child-theme.css' : '';
 	let files = [styleCss, styleChildThemeCss].filter(Boolean);
@@ -25,6 +26,6 @@ async function versionBumpStyleCss() {
 	await replace({
 		files,
 		from: /(?<=Version:\s*).*?(?=\s*\r?\n|\rg)/gs,
-		to: ` ${version}`,
+		to: ` ${newVersion}`,
 	});
 }
