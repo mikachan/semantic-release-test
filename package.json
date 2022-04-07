@@ -22,7 +22,7 @@
     "lerna": "^4.0.0"
   },
   "devDependencies": {
-    "fs": "0.0.1-security",
+    "fs": "^0.0.2",
     "husky": "^7.0.4",
     "replace-in-file": "^6.3.2"
   }
