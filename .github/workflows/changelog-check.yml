@@ -16,6 +16,6 @@ jobs:
         uses: dorny/paths-filter@v2.2.1
         id: filter
         with:
-        filters: |
-          txt:
-            - '**/*.txt'
+          filters: |
+            txt:
+              - '**/*.txt'
