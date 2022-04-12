@@ -17,10 +17,17 @@ jobs:
         id: filter
         with:
           filters: |
+            theme_update:
+              - '**/**'
+            excluded_subfolders:
+              - 'variations/**'
+              - '.github/**'
+              - '.husky/**'
+              - '.phab/**'
             readme:
               - '**/readme.txt'
       - name: Reminder to update changelog
-        if: ${{ steps.filter.outputs.readme == 'false' }}
+        if: ${{ steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded_folders == 'false' && steps.filter.outputs.readme == 'false' }}
         uses: actions/github-script@v3
         with:
           script: |
