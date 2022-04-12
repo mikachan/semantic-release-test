@@ -12,10 +12,13 @@ jobs:
     name: Ensure changelog has been updated
     runs-on: ubuntu-latest
     steps:
-      - name: Verify Changed files
+      - name: Verify readme files
         uses: dorny/paths-filter@v2.2.1
         id: filter
         with:
           filters: |
-            txt:
-              - '**/*.txt'
+            readme:
+              - '**/readme.txt'
+       - name: Reminder to update changelog
+        if: ${{ steps.filter.outputs.readme == 'false' }}
+        run: echo "Please update the changelog in the readme.txt of any updated themes."
