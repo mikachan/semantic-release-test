@@ -21,4 +21,7 @@ jobs:
               - '**/readme.txt'
       - name: Reminder to update changelog
         if: ${{ steps.filter.outputs.readme == 'false' }}
-        run: echo "Please update the changelog in the readme.txt of any updated themes."
+        uses: actions/github-script@v3
+        with:
+          script: |
+              core.setFailed('Please update the changelog in the readme.txt of any updated themes.')
