@@ -9,17 +9,17 @@ on:
 
 jobs:
   main:
-    name: Ensure changelog has been updated
+    name: Ensure a readme.txt file has been updated
     runs-on: ubuntu-latest
     steps:
-      - name: Verify readme files
+      - name: Verify any readme files
         uses: dorny/paths-filter@v2.2.1
         id: filter
         with:
           filters: |
             theme_update:
               - '**/**'
-            excluded_subfolders:
+            excluded:
               - 'variations/**'
               - '.github/**'
               - '.husky/**'
@@ -27,7 +27,7 @@ jobs:
             readme:
               - '**/readme.txt'
       - name: Reminder to update changelog
-        if: ${{ steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded_folders == 'false' && steps.filter.outputs.readme == 'false' }}
+        if: ${{ steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false' && steps.filter.outputs.readme == 'false' }}
         uses: actions/github-script@v3
         with:
           script: |
