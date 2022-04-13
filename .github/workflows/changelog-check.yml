@@ -18,12 +18,12 @@ jobs:
         with:
           filters: |
             theme_change:
-              - '**/**'
+              - '**/*/**'
             theme_readme:
               - '**/readme.txt'
             root_files:
-              - '**.**'
-              - '!**/**.**'
+              - '*'
+              - '!**/*/**'
             excluded_subfolders:
               - 'variations/**'
               - '.github/**'
@@ -36,7 +36,7 @@ jobs:
           echo "root_files ${{steps.filter.outputs.root_files}}"
           echo "theme_readme ${{steps.filter.outputs.theme_readme}}"
       - name: Reminder to update changelog
-        if: ${{ (steps.filter.outputs.excluded_subfolders == 'false' || steps.filter.outputs.root_files == 'false') && steps.filter.outputs.theme_change == 'true' && steps.filter.outputs.theme_readme == 'false' }}
+        if: ${{ (steps.filter.outputs.excluded_subfolders == 'false' && steps.filter.outputs.root_files == 'false') && steps.filter.outputs.theme_change == 'true' && steps.filter.outputs.theme_readme == 'false' }}
         uses: actions/github-script@v3
         with:
           script: |
