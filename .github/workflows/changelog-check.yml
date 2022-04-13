@@ -1,0 +1,34 @@
+name: "Changelog Check"
+
+on:
+  pull_request:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+jobs:
+  main:
+    name: Ensure a readme.txt file has been updated
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify any readme files
+        uses: dorny/paths-filter@v2.2.1
+        id: filter
+        with:
+          filters: |
+            theme_update:
+              - '**/**'
+            excluded:
+              - 'variations/**'
+              - '.github/**'
+              - '.husky/**'
+              - '.phab/**'
+            readme:
+              - '**/readme.txt'
+      - name: Reminder to update changelog
+        if: ${{ (steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false') || steps.filter.outputs.readme == 'false' }}
+        uses: actions/github-script@v3
+        with:
+          script: |
+              core.setFailed('Please update the changelog in the readme.txt of any updated themes.')
