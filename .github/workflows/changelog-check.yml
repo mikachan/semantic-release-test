@@ -6,13 +6,6 @@ on:
       - opened
       - edited
       - synchronize
-    paths-ignore:
-      # Ignore changes to all files in root, and specific subfolders
-      - '/**.**'
-      - 'variations/**'
-      - '.github/**'
-      - '.husky/**'
-      - '.phab/**'
 
 jobs:
   main:
@@ -26,10 +19,15 @@ jobs:
           filters: |
             theme_update:
               - '**/**'
+            excluded:
+              - 'variations/**'
+              - '.github/**'
+              - '.husky/**'
+              - '.phab/**'
             readme:
               - '**/readme.txt'
       - name: Reminder to update changelog
-        if: ${{ steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.readme == 'false' }}
+        if: ${{ (steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false') && steps.filter.outputs.readme == 'false' }}
         uses: actions/github-script@v3
         with:
           script: |
