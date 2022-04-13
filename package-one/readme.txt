@@ -12,6 +12,9 @@ A theme inspired by Mayan history and culture.
 
 == Changelog ==
 
+= 1.0.2 =
+* Added flex support
+
 = 1.0.1 =
 * Added support for wp-block-styles
 
