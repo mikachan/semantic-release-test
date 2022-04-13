@@ -27,10 +27,11 @@ jobs:
               - '.phab/**'
             readme:
               - '**/readme.txt'
+      - name: Logging
+          run: echo ${excluded}_files
       - name: Reminder to update changelog
         if: ${{ (steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false') && steps.filter.outputs.readme == 'false' }}
         uses: actions/github-script@v3
         with:
           script: |
               core.setFailed('Please update the changelog in the readme.txt of any updated themes.')
-          run: echo ${excluded}_files
