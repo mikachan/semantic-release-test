@@ -20,7 +20,7 @@ jobs:
             theme_update:
               - '**/**'
             excluded:
-              - './*.*'
+              - '/*.*'
               - 'variations/**'
               - '.github/**'
               - '.husky/**'
