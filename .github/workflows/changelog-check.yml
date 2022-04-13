@@ -19,12 +19,12 @@ jobs:
           filters: |
             theme_update:
               - '**/**'
+              - '!variations/**'
+              - '!.github/**'
+              - '!.husky/**'
+              - '!.phab/**'
             excluded:
               - '/*.*'
-              - 'variations/**'
-              - '.github/**'
-              - '.husky/**'
-              - '.phab/**'
             readme:
               - '**/readme.txt'
       - name: Check if a readme.txt needs to be updated
