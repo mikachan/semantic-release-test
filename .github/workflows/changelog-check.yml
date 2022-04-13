@@ -26,8 +26,11 @@ jobs:
               - '.phab/**'
             readme:
               - '**/readme.txt'
+      - name: Check if readme.txt needs to be updated
+        if: ${{ steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false' }}
+        run: echo "No readme.txt needs to be updated."
       - name: Reminder to update changelog
-        if: ${ steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false' }
+        if: ${{ steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false' }}
         run: echo "No readme.txt needs to be updated."
         if: ${{ (steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false') && steps.filter.outputs.readme == 'false' }}
         uses: actions/github-script@v3
