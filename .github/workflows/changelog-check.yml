@@ -33,4 +33,4 @@ jobs:
         with:
           script: |
               core.setFailed('Please update the changelog in the readme.txt of any updated themes.')
-        run: echo ${excluded}_files
+          run: echo ${excluded}_files
