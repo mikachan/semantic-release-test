@@ -35,5 +35,5 @@ Included in theme screenshot.
 */
 
 .wp-block-group.test {
-    display: flex;
+    display: block;
 }
