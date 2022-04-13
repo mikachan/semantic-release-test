@@ -20,7 +20,8 @@ jobs:
             theme_update:
               - '**/**'
             root_files:
-              - /^[^/].+\.(.+)$/gm
+              - '**.**'
+              - '!**/**.**'
             excluded_subfolders:
               - 'variations/**'
               - '.github/**'
