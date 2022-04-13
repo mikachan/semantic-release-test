@@ -33,3 +33,7 @@ License: CC0
 Source: https://www.artic.edu/artworks/38666/the-water-fan
 Included in theme screenshot.
 */
+
+.wp-block-group.test {
+    display: block;
+}
