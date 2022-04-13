@@ -28,7 +28,8 @@ jobs:
             readme:
               - '**/readme.txt'
       - name: Logging
-          run: echo "$excluded_files"
+          with:
+            message: "added on ${{steps.filter.outputs.theme_update}}"
       - name: Reminder to update changelog
         if: ${{ (steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false') && steps.filter.outputs.readme == 'false' }}
         uses: actions/github-script@v3
