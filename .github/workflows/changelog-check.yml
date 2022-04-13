@@ -27,15 +27,15 @@ jobs:
               - '.phab/**'
             readme:
               - '**/readme.txt'
+      - name: Check if excluded files have been changed
+        if: ${{ steps.filter.outputs.excluded == 'false' }}
+        run: |
+          echo "A readme.txt does not need to be updated."
       - name: Logging
         run: | 
           echo "theme_update ${{steps.filter.outputs.theme_update}}"
           echo "excluded ${{steps.filter.outputs.excluded}}"
           echo "readme ${{steps.filter.outputs.readme}}"
-      - name: Check if excluded files have been changed
-        if: ${{ steps.filter.outputs.excluded == 'false' }}
-        run: |
-          echo "A readme.txt does not need to be updated."
       - name: Reminder to update changelog
         if: ${{ (steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false') && steps.filter.outputs.readme == 'false' }}
         uses: actions/github-script@v3
