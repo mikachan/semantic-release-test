@@ -8,7 +8,7 @@ on:
       - synchronize
     paths-ignore:
       # Ignore changes to all files in root, and specific subfolders
-      - '/**.**'
+      - './**.**'
       - 'variations/**'
       - '.github/**'
       - '.husky/**'
