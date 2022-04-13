@@ -20,7 +20,7 @@ jobs:
             theme_update:
               - '**/**'
             root_files:
-              - '/utils.mjs'
+              - 'utils.mjs$'
             excluded_subfolders:
               - 'variations/**'
               - '.github/**'
