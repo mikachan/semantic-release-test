@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 18.0.0 (2022-04-13)
+
+
+### Features
+
+* add index.js to package three ([#15](https://github.com/mikachan/semantic-release-test/issues/15)) ([7491289](https://github.com/mikachan/semantic-release-test/commit/7491289efb98f8f6cfa9ea917cffdec8d8a5b820))
+* add update-stylecss script ([a33c271](https://github.com/mikachan/semantic-release-test/commit/a33c271bd0b595bf04d6ddb0a235a36fd5e6d6b2))
+* package three misc updates ([#38](https://github.com/mikachan/semantic-release-test/issues/38)) ([e72462f](https://github.com/mikachan/semantic-release-test/commit/e72462f3b198992bfd89dc497d956ad67045f310))
+* test non conventional commits ([#37](https://github.com/mikachan/semantic-release-test/issues/37)) ([15cfb33](https://github.com/mikachan/semantic-release-test/commit/15cfb3374efd389ed1faf367d5c30cd9a7f17bc5))
+
+
+### BREAKING CHANGES
+
+* This is a breaking change.
+
+
+
+
+
 # 17.0.0 (2022-04-13)
 
 
