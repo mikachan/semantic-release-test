@@ -32,4 +32,5 @@ jobs:
         uses: actions/github-script@v3
         with:
           script: |
+              core.info({steps.filter.outputs.theme_update, steps.filter.outputs.excluded, steps.filter.outputs.readme})
               core.setFailed('Please update the changelog in the readme.txt of any updated themes.')
