@@ -12,7 +12,7 @@ A theme inspired by Mayan history and culture.
 
 == Changelog ==
 
-= 1.0.3 =
+= 1.0.2 =
 * Added flex support
 
 = 1.0.1 =
