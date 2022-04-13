@@ -24,7 +24,7 @@ jobs:
               - '!.husky/**'
               - '!.phab/**'
             excluded:
-              - '*.*'
+              - './**.**'
             readme:
               - '**/readme.txt'
       - name: Check if a readme.txt needs to be updated
