@@ -28,7 +28,10 @@ jobs:
             readme:
               - '**/readme.txt'
       - name: Logging
-        run: echo "outputs ${{steps.filter.outputs.theme_update}}"
+        run: | 
+          echo "theme_update ${{steps.filter.outputs.theme_update}}"
+          echo "excluded ${{steps.filter.outputs.excluded}}"
+          echo "readme ${{steps.filter.outputs.readme}}"
       - name: Reminder to update changelog
         if: ${{ (steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false') && steps.filter.outputs.readme == 'false' }}
         uses: actions/github-script@v3
