@@ -9,7 +9,7 @@ on:
 
 jobs:
   main:
-    name: Ensure a readme.txt file has been updated
+    name: Ensure a readme.txt file has been updated if a theme has been changed
     runs-on: ubuntu-latest
     steps:
       - name: Verify any readme files
@@ -17,27 +17,20 @@ jobs:
         id: filter
         with:
           filters: |
-            theme_update:
+            theme_change:
               - '**/**'
-            excluded:
-              - '/*.*'
+            theme_readme:
+              - '**/readme.txt'
+            root_files:
+              - '**.**'
+              - '!**/**.**'
+            excluded_subfolders:
               - 'variations/**'
               - '.github/**'
               - '.husky/**'
               - '.phab/**'
-            readme:
-              - '**/readme.txt'
-      - name: Check if excluded files have been changed
-        if: ${{ steps.filter.outputs.excluded == 'false' }}
-        run: |
-          echo "A readme.txt does not need to be updated."
-      - name: Logging
-        run: | 
-          echo "theme_update ${{steps.filter.outputs.theme_update}}"
-          echo "excluded ${{steps.filter.outputs.excluded}}"
-          echo "readme ${{steps.filter.outputs.readme}}"
       - name: Reminder to update changelog
-        if: ${{ (steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false') && steps.filter.outputs.readme == 'false' }}
+        if: ${{ (steps.filter.outputs.excluded_subfolders == 'false' || steps.filter.outputs.root_files == 'false') && steps.filter.outputs.theme_change == 'true' && steps.filter.outputs.theme_readme == 'false' }}
         uses: actions/github-script@v3
         with:
           script: |
