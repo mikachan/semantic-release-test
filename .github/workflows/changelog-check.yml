@@ -29,6 +29,12 @@ jobs:
               - '.github/**'
               - '.husky/**'
               - '.phab/**'
+      - name: Logging
+        run: | 
+          echo "theme_change ${{steps.filter.outputs.theme_change}}"
+          echo "excluded_subfolders ${{steps.filter.outputs.excluded_subfolders}}"
+          echo "root_files ${{steps.filter.outputs.root_files}}"
+          echo "theme_readme ${{steps.filter.outputs.theme_readme}}"
       - name: Reminder to update changelog
         if: ${{ (steps.filter.outputs.excluded_subfolders == 'false' || steps.filter.outputs.root_files == 'false') && steps.filter.outputs.theme_change == 'true' && steps.filter.outputs.theme_readme == 'false' }}
         uses: actions/github-script@v3
