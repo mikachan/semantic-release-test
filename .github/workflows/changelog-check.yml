@@ -6,15 +6,25 @@ on:
       - opened
       - edited
       - synchronize
-    paths-ignore:
-      # Ignore changes to all files in root, and specific subfolders
-      - './*.*'
-      - 'variations/**'
-      - '.github/**'
-      - '.husky/**'
-      - '.phab/**'
 
 jobs:
+  check-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      continue: ${{steps.changefile.outputs.continue}}
+    steps:
+    - uses: actions/checkout@v1
+    - name: Ignore changes to all files in root, and specific subfolders
+      id: changefile
+      run: |
+        changed_file=$(git diff-tree --no-commit-id --name-only -r ${{ github.event.before }} ${{github.event.after}})
+        file_count=$(git diff-tree --no-commit-id --name-only -r ${{ github.event.before }} ${{github.event.after}} | wc -l )
+        if [[$changed_file == './*.*' || $changed-file == 'variations/**' || $changed_file == '.github/**' || '.husky/**' || '.phab/**']]
+        then
+          echo ::set-output name=continue::false
+        else
+          echo ::set-output name=continue::true
+        fi
   main:
     name: Ensure a readme.txt file has been updated
     runs-on: ubuntu-latest
