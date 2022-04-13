@@ -29,11 +29,6 @@ jobs:
               - '.github/**'
               - '.husky/**'
               - '.phab/**'
-      - name: Check if a readme.txt needs to be updated
-        if: ${{ steps.filter.outputs.excluded_subfolders == 'true' || steps.filter.outputs.root_files == 'true' }}
-        run: |
-          echo "A readme.txt does not need to be updated."
-          exit 0
       - name: Logging
         run: | 
           echo "theme_change ${{steps.filter.outputs.theme_change}}"
@@ -41,7 +36,7 @@ jobs:
           echo "root_files ${{steps.filter.outputs.root_files}}"
           echo "theme_readme ${{steps.filter.outputs.theme_readme}}"
       - name: Reminder to update changelog
-        if: ${{ steps.filter.outputs.theme_change == 'true' && steps.filter.outputs.theme_readme == 'false' }}
+        if: ${{ (steps.filter.outputs.excluded_subfolders == 'false' || steps.filter.outputs.root_files == 'false') && steps.filter.outputs.theme_change == 'true' && steps.filter.outputs.theme_readme == 'false' }}
         uses: actions/github-script@v3
         with:
           script: |
