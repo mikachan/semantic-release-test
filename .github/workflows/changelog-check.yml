@@ -27,6 +27,8 @@ jobs:
             readme:
               - '**/readme.txt'
       - name: Reminder to update changelog
+        if: ${ steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false' }
+        with: echo "No readme.txt needs to be updated."
         if: ${{ (steps.filter.outputs.theme_update == 'true' && steps.filter.outputs.excluded == 'false') && steps.filter.outputs.readme == 'false' }}
         uses: actions/github-script@v3
         with:
