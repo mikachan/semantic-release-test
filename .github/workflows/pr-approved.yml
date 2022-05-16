@@ -1,0 +1,17 @@
+name: Comment on Approved PR
+
+on:
+  pull_request_review:
+    types: [submitted]
+jobs:
+  run:
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/auto-comment@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          pullRequestSynchronize: |
+            👋 @{{ author }}
+            Thank you for contributing to our repo!
+            Please be aware that merging your PR will not automatically deploy your change. The Themes Team will handle the deployment for you. You can read more about our workflow in our contributing guidelines.
